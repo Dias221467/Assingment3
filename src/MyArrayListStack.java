@@ -7,6 +7,9 @@ public class MyArrayListStack<T> extends MyArrayList<T> {
         this.arr = (T[]) new Object[5];
         this.size = 0;
     }
+    public int size() {
+        return list.size();
+    }
     public void push(T element) {
         list.add(element);
     }

@@ -1,6 +1,6 @@
+import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
-
         /*
         MyArrayListStack arrayList = new MyArrayList();
         arrayList.add(5);
@@ -33,4 +33,4 @@ public class Main {
         lists.printList();
          */
     }
-}
+

@@ -24,7 +24,6 @@
                 System.out.println("Front of queue: " + queue.peek()); // hello
                 System.out.println("Dequeued element: " + queue.dequeue()); // hello
                 queue.print_queue(); // [world, !]
-                queue.flush(); // empty the queue
                 System.out.println("Is queue empty? " + queue.isEmpty()); // true
             }
         }

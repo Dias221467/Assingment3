@@ -38,7 +38,4 @@ public class MyArrayListQueue<T> extends MyArrayList {
     public boolean isEmpty() {
         return list.isEmpty();
     }
-    public void flush() {
-        this.list = new MyArrayList<>();
-    }
 }

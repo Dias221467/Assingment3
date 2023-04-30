@@ -57,4 +57,81 @@ public T dequeue() {
 
 #### Peek
 
-__Description__
+__Description:__ _This code defines a method called peek that returns the first element of a queue represented by an instance of MyArrayListQueue, without removing it from the queue. It assumes that the queue is stored as a list, and uses the get method of the list to retrieve the first element. The method throws a NoSuchElementException if the queue is empty, which means that there are no elements to peek at. The method returns a generic type T, which represents the element at the front of the queue._
+
+__Solution:__
+````Java
+public T peek() {
+        if (list.isEmpty()) {
+            throw new NoSuchElementException("Queue is empty");
+        }
+        return list.get(0);
+    }
+````
+
+#### isEmpty
+
+__Description:__ _This code defines a method called isEmpty that checks whether a queue represented by an instance of MyArrayListQueue is empty. It assumes that the queue is stored as a list, and uses the isEmpty method of the list to check whether it is empty. The method returns a boolean value true if the queue is empty, and false otherwise._
+
+__Solution:__
+````Java
+ public boolean isEmpty() {
+        return list.isEmpty();
+    }
+````
+
+### MyArrayListStack
+
+#### print_stack
+
+__Description:__ _This code defines a method called print_stack that prints the elements of a stack represented by an instance of MyArrayListStack. It assumes that the stack is stored as a list, and uses a loop to iterate over the elements of the list in reverse order, starting from the top of the stack. It prints each element followed by a comma and space, except for the last element. Finally, it prints a closing square bracket and a newline character._
+
+__Solution__
+````Java
+public void print_stack(){
+        System.out.print("[");
+        for (int i = list.size() - 1; i >= 0; i--) {
+            System.out.print(list.get(i));
+            if (i != 0) {
+                System.out.print(", ");
+            }
+        }
+        System.out.println("]");
+    }
+````
+
+#### Size
+
+__Description:__ _This method returns the number of elements in the stack. It calls the size() method of the underlying MyArrayList instance that stores the elements of the stack and returns the result. The size() method of MyArrayList returns the number of elements in the list. In other words, this method returns the size of the stack._
+
+__Solution__
+````Java
+ public int size() {
+        return list.size();
+    }
+````
+
+#### push
+
+__Description:__ _This method adds an element to the top of the stack. It takes a generic type parameter 'T' as input, which is the element to be added to the stack. The method simply calls the add method of the underlying MyArrayList instance to add the element to the end of the list. This operation is equivalent to adding the element to the top of the stack, as the last element added to the list will be the first element to be removed when popping from the stack._
+
+__Soltuion__
+````Java
+public void push(T element) {
+        list.add(element);
+    }
+````
+
+#### pop
+
+__Description:__ __
+
+__Solution__
+````Java
+public T pop() {
+        if (list.isEmpty()) {
+            throw new EmptyStackException();
+        }
+        return (T) list.remove(list.size() - 1);
+    }
+````

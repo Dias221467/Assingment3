@@ -32,4 +32,7 @@ public class MyArrayListQueue<T> implements Queue<T> {
         }
         return list.get(0);
     }
+    public boolean isEmpty() {
+        return list.isEmpty();
+    }
 }

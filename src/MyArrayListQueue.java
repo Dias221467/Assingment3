@@ -7,6 +7,9 @@ public class MyArrayListQueue<T> implements Queue<T> {
         this.arr = (T[]) new Object[5];
         this.size = 0;
     }
+    public int size() {
+        return list.size();
+    }
     public void print_queue(){
         System.out.print("[");
         for (int i = list.size() - 1; i >= 0; i--) {

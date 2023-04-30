@@ -1,5 +1,5 @@
 import java.util.NoSuchElementException;
-public class MyArrayListQueue<T> implements Queue<T> {
+public class MyArrayListQueue<T> extends MyArrayList {
     MyArrayList<T> list = new MyArrayList<T>();
     private T[] arr;
     private int size;
@@ -37,5 +37,8 @@ public class MyArrayListQueue<T> implements Queue<T> {
     }
     public boolean isEmpty() {
         return list.isEmpty();
+    }
+    public void flush() {
+        this.list = new MyArrayList<>();
     }
 }

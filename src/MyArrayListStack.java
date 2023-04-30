@@ -1,5 +1,5 @@
 import java.util.EmptyStackException;
-public class MyArrayListStack<T> implements Stack<T> {
+public class MyArrayListStack<T> extends MyArrayList {
     MyArrayList<T> list = new MyArrayList<T>();
     private T[] arr;
     private int size;

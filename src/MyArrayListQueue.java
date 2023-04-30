@@ -26,4 +26,10 @@ public class MyArrayListQueue<T> implements Queue<T> {
         }
         return (T) list.remove(0);
     }
+    public T peek() {
+        if (list.isEmpty()) {
+            throw new NoSuchElementException("Queue is empty");
+        }
+        return list.get(0);
+    }
 }

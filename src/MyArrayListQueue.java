@@ -20,4 +20,10 @@ public class MyArrayListQueue<T> implements Queue<T> {
     public void enqueue(T element) {
         list.add(element);
     }
+    public T dequeue() {
+        if (list.isEmpty()) {
+            throw new NoSuchElementException("Queue is empty");
+        }
+        return (T) list.remove(0);
+    }
 }

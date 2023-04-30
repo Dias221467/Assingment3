@@ -124,7 +124,7 @@ public void push(T element) {
 
 #### pop
 
-__Description:__ __
+__Description:__ _This method removes and returns the top element of the stack. It first checks if the list is empty and throws an EmptyStackException if it is. Otherwise, it uses the remove method of the list object to remove and return the last element in the list, which is the top element of the stack since we are using a Last-In-First-Out (LIFO) approach. The cast to (T) is necessary because the remove method returns an Object type, so we need to cast it to the generic type T of the stack._
 
 __Solution__
 ````Java
@@ -133,5 +133,30 @@ public T pop() {
             throw new EmptyStackException();
         }
         return (T) list.remove(list.size() - 1);
+    }
+````
+
+#### peek
+
+__Description:__ _This is a method for the MyArrayListStack class that returns the top element of the stack without removing it. The method first checks if the list is empty using the isEmpty() method. If the list is empty, it throws an EmptyStackException. Otherwise, it returns the last element in the list using the get() method with an index of list.size() - 1, which is the index of the last element in the list._
+
+__Solution__
+````Java
+public T peek() {
+        if (list.isEmpty()) {
+            throw new EmptyStackException();
+        }
+        return list.get(list.size() - 1);
+    }
+````
+
+#### isEmpty
+
+__Description:__ _The isEmpty method checks if the stack is empty or not. It returns true if the stack is empty, and false otherwise. The implementation is quite simple, as it just returns the result of calling the isEmpty method of the underlying MyArrayList instance._
+
+__Solution__
+````Java
+ public boolean isEmpty() {
+        return list.isEmpty();
     }
 ````

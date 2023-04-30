@@ -16,5 +16,10 @@ public class MyArrayListStack<T> extends MyArrayList<T> {
         }
         return (T) list.remove(list.size() - 1);
     }
-
+    public T peek() {
+        if (list.isEmpty()) {
+            throw new EmptyStackException();
+        }
+        return list.get(list.size() - 1);
+    }
 }
